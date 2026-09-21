@@ -1,0 +1,301 @@
+/* =========================================================
+   TOKENS
+   ========================================================= */
+:root {
+  --ink: #12151c;
+  --ink-soft: #1a1f29;
+  --accent: #ffb100;
+  --accent-soft: #ffd166;
+  --text: #f5f3ee;
+  --muted: #9aa2b4;
+  --border: rgba(245, 243, 238, 0.12);
+
+  --font-display: "Archivo Black", "Work Sans", sans-serif;
+  --font-body: "Work Sans", -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+#mainNav {
+  background-color: rgba(18, 21, 28, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  color: var(--accent) !important;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text) !important;
+  font-weight: 500;
+  margin-left: 1.5rem;
+  padding: 0.25em 0 !important;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  border-bottom: 2px solid var(--accent);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+  min-height: 90vh;
+  padding: 4rem 0;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(255, 177, 0, 0.12), transparent 45%),
+    var(--ink);
+}
+
+.hero-tag {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 6vw, 5rem);
+  line-height: 0.98;
+  margin: 0 0 1.25rem 0;
+}
+
+.hero-intro {
+  max-width: 42em;
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--ink-soft);
+  outline: 2px solid var(--accent);
+  outline-offset: 8px;
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  border: none;
+  color: #1a1200;
+  font-weight: 700;
+  padding: 0.65em 1.6em;
+  border-radius: 4px;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-soft);
+  color: #1a1200;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+.section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background-color: var(--ink-soft);
+}
+
+.section-eyebrow {
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  margin-bottom: 2rem;
+  max-width: 20em;
+}
+
+/* ---- About ---- */
+.about-lead {
+  font-size: 1.15rem;
+  color: var(--text);
+  max-width: 30em;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+.about-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.85em 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.about-list li span {
+  color: var(--muted);
+}
+
+/* ---- Skills ---- */
+.skill-card {
+  background-color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.75rem 1.5rem;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.skill-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 0.6em;
+}
+
+.skill-card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.badge-row {
+  margin-top: 2.5rem;
+}
+
+.tag-badge {
+  background-color: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent-soft);
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 0.5em 1em;
+  border-radius: 999px;
+}
+
+/* ---- Interactive ---- */
+.interact-row .form-control {
+  background-color: var(--ink-soft);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.interact-row .form-control::placeholder {
+  color: var(--muted);
+}
+
+.greet-result {
+  margin-top: 1.5rem;
+  padding: 1em 1.25em;
+  background-color: var(--ink-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  font-size: 1.05rem;
+}
+
+.greet-result.show-result {
+  animation: pop-in 0.25s ease;
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Contact form ---- */
+#contact .form-control {
+  background-color: var(--ink);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 0.65em 0.9em;
+}
+
+#contact .form-control:focus {
+  background-color: var(--ink);
+  color: var(--text);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 177, 0, 0.2);
+}
+
+#contact .form-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.4em;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 767px) {
+  .hero {
+    min-height: auto;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .about-list li {
+    flex-direction: column;
+    gap: 0.25em;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
